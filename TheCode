@@ -9,10 +9,11 @@ extern "C" int recieve_from_server (char message[]);
 int main(){
 
 init(1);
-connect_to_server(130.195.6.196, 1024);
+connect_to_server("192.168.1.2", 1024);
 send_to_server("Hello server");
-String message[1024];
-message[24] = recieve from server("my-password");
+char message[24];
+message = recieve_from_server();
+printf("%s", message);
 
 return 0;
 }
